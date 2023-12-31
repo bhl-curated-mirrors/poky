@@ -28,7 +28,7 @@ FILES:${PN} += "${datadir}/application-registry  \
 FILES:${PN}-doc += "${datadir}/devhelp"
 
 GNOMEBASEBUILDCLASS ??= "meson"
-inherit ${GNOMEBASEBUILDCLASS} pkgconfig
+inherit_defer ${GNOMEBASEBUILDCLASS} pkgconfig
 
 do_install:append() {
 	rm -rf ${D}${localstatedir}/lib/scrollkeeper/*
